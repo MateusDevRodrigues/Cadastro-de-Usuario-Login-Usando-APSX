@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DEV1301
+namespace DEV1301.DataBase
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DEV1301Entities : DbContext
+    public partial class DataCadastroEntities3 : DbContext
     {
-        public DEV1301Entities()
-            : base("name=DEV1301Entities")
+        public DataCadastroEntities3()
+            : base("name=DataCadastroEntities3")
         {
         }
     

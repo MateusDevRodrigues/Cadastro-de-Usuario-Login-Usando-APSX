@@ -4,38 +4,36 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DEV1301Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DataCadastroModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tabUsuario">
           <Key>
             <PropertyRef Name="codigo" />
           </Key>
-          <Property Name="codigo" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nome" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="300" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="senha" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="dataCadastro" Type="datetime" Nullable="false" />
-          <Property Name="dataUltimoAcesso" Type="datetime" />
+          <Property Name="repetirsenha" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DEV1301ModelStoreContainer">
+        <EntityContainer Name="DataCadastroModelStoreContainer">
           <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DEV1301Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DataCadastroModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="tabUsuario">
           <Key>
             <PropertyRef Name="codigo" />
           </Key>
-          <Property Name="codigo" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dataCadastro" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="dataUltimoAcesso" Type="DateTime" Precision="3" />
+          <Property Name="repetirsenha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DEV1301Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DataCadastroEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tabUsuario" EntityType="Self.tabUsuario" />
         </EntityContainer>
       </Schema>
@@ -43,16 +41,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DEV1301ModelStoreContainer" CdmEntityContainer="DEV1301Entities">
+        <EntityContainerMapping StorageEntityContainer="DataCadastroModelStoreContainer" CdmEntityContainer="DataCadastroEntities3">
           <EntitySetMapping Name="tabUsuario">
-            <EntityTypeMapping TypeName="DEV1301Model.tabUsuario">
+            <EntityTypeMapping TypeName="DataCadastroModel.tabUsuario">
               <MappingFragment StoreEntitySet="tabUsuario">
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="senha" ColumnName="senha" />
-                <ScalarProperty Name="dataCadastro" ColumnName="dataCadastro" />
-                <ScalarProperty Name="dataUltimoAcesso" ColumnName="dataUltimoAcesso" />
+                <ScalarProperty Name="repetirsenha" ColumnName="repetirsenha" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

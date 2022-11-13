@@ -7,18 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DEV1301
+namespace DEV1301.DataBase
 {
     using System;
     using System.Collections.Generic;
     
     public partial class tabUsuario
     {
-        public long codigo { get; set; }
+        public int codigo { get; set; }
         public string nome { get; set; }
         public string email { get; set; }
         public string senha { get; set; }
-        public System.DateTime dataCadastro { get; set; }
-        public Nullable<System.DateTime> dataUltimoAcesso { get; set; }
+        public string repetirsenha { get; set; }
     }
 }

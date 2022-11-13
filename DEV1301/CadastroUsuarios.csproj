@@ -75,75 +75,77 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Banco1.Context.tt">
+    <Content Include="Css\Cadastro.css" />
+    <Content Include="Css\Login.css" />
+    <Content Include="DataBase\TabelaUsuarios.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Banco1.Context.cs</LastGenOutput>
-      <DependentUpon>Banco1.edmx</DependentUpon>
+      <DependentUpon>TabelaUsuarios.edmx</DependentUpon>
+      <LastGenOutput>TabelaUsuarios.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Banco1.tt">
+    <Content Include="DataBase\TabelaUsuarios.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Banco1.edmx</DependentUpon>
-      <LastGenOutput>Banco1.cs</LastGenOutput>
+      <DependentUpon>TabelaUsuarios.edmx</DependentUpon>
+      <LastGenOutput>TabelaUsuarios.cs</LastGenOutput>
     </Content>
-    <Content Include="Cadastro.aspx" />
-    <Content Include="Global.asax" />
-    <Content Include="Login.aspx" />
+    <Content Include="Views\Cadastro.aspx" />
+    <Content Include="Views\Global.asax" />
+    <Content Include="Views\Login.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Home.aspx" />
+    <Content Include="Views\Home.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco1.Context.cs">
+    <Compile Include="DataBase\TabelaUsuarios.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Banco1.Context.tt</DependentUpon>
+      <DependentUpon>TabelaUsuarios.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Banco1.cs">
+    <Compile Include="DataBase\TabelaUsuarios.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Banco1.tt</DependentUpon>
+      <DependentUpon>TabelaUsuarios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Banco1.Designer.cs">
+    <Compile Include="DataBase\TabelaUsuarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Banco1.edmx</DependentUpon>
+      <DependentUpon>TabelaUsuarios.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro.aspx.cs">
+    <Compile Include="DataBase\tabUsuario.cs">
+      <DependentUpon>TabelaUsuarios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cadastro.aspx.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cadastro.aspx.designer.cs">
+    <Compile Include="Views\Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\UsuarioDAL.cs" />
-    <Compile Include="Global.asax.cs">
+    <Compile Include="Views\Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Home.aspx.cs">
+    <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
+    <Compile Include="Views\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tabUsuario.cs">
-      <DependentUpon>Banco1.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Banco1.edmx">
+    <EntityDeploy Include="DataBase\TabelaUsuarios.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Banco1.Designer.cs</LastGenOutput>
+      <LastGenOutput>TabelaUsuarios.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Banco1.edmx.diagram">
-      <DependentUpon>Banco1.edmx</DependentUpon>
+    <Content Include="DataBase\TabelaUsuarios.edmx.diagram">
+      <DependentUpon>TabelaUsuarios.edmx</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -153,10 +155,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
